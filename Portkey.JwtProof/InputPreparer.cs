@@ -35,7 +35,7 @@ public static class InputPreparer
             { "salt", salt.Select(b => b.ToString()).ToList() },
             { "payload_start_index", new List<string>() { (header.Length + 1).ToString() } },
         };
-        var claimArgs = new[] { ClaimName.Subject, ClaimName.ExpirationTime, ClaimName.Nonce }.SelectMany(claimName =>
+        var claimArgs = new[] { ClaimName.Subject, ClaimName.Nonce }.SelectMany(claimName =>
             jwtB64.Extract(claimName).IterArguments()
         );
         foreach (var (name, value) in claimArgs)
