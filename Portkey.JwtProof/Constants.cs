@@ -9,7 +9,7 @@ public static class Constants
 
     internal static readonly Dictionary<ClaimName, string> RegexPatterns = new()
     {
-        { ClaimName.Subject, "\"sub\"\\s*:\\s*\"[\\w]+\"\\s*[,}]" },
+        { ClaimName.Subject, "\"sub\"\\s*:\\s*\"[\\.\\w]+\"\\s*[,}]" },
         { ClaimName.Nonce, "\"nonce\"\\s*:\\s*\"[\\w]+\"\\s*[,}]" },
         { ClaimName.ExpirationTime, "\"exp\"\\s*:\\s*\\d+\\s*[,}]" },
     };
